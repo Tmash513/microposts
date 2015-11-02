@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        フォロー一覧
+    </div>
+    
+    <div class="panel-body">
+        <% @followings.each do |f| %>
+            <span class="label label-info">
+                <%= f.name %>
+            </span>
+                <%= render "unfollow" %>
+            <br />
+        <% end %>
+    </div>
+</div>
