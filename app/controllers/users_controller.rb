@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:edit, :update,]
+  before_action :logged_in_user, only: [:index, :edit, :update, :destroy, :followings, :followers]
   
   def edit
   end
@@ -32,14 +32,23 @@ class UsersController < ApplicationController
   end
   
   def followings
+    @title = "Following"
     @user = User.find(params[:id])
     @followings = @user.following_users
+    render 'followings'
   end
   
   def followers
+    @title = "Followers"
     @user = User.find(params[:id])
     @followers = @user.follower_users
+    render 'followers'
   end
+  
+  # kaminariの実装
+#  def index
+#    @users = User.page(params[:page]).per(10).order(:id)
+#  end
   
   private
   
