@@ -44,5 +44,8 @@ group :development, :test do
   gem 'spring'
   
   gem 'kaminari'
+  gem 'carrierwave'
+  gem 'mini_magick'
+  gem 'fog'
 end
 

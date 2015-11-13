@@ -4,11 +4,10 @@
     </div>
     
     <div class="panel-body">
-        <% @followings.each do |f| %>
+        <% @followings.each do |following| %>
             <span class="label label-info">
-                <%= f.name %>
+                <%= following.name %>
             </span>
-             <%= render 'users/follow_form' %>
             <br />
         <% end %>
     </div>
