@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   end
   
   def update
-    if @user.update(user_params)
+    if current_user.update(user_params)
       redirect_to user_path , notice: '編集を保存しました'
     else
       render 'edit'
