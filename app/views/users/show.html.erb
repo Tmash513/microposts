@@ -5,6 +5,9 @@
                 <%= gravatar_for @user %>
                 <%= @user.name %>
             </h1>
+                <div>　　　　地域：<%= @user.location %></div>
+                <div>ウェブサイト：<%= @user.website %></div>
+                <div>　　　　略歴：<%= @user.bio %></div>
         </section>
         <section class="stats">
             <%= render 'shared/stats' %>
